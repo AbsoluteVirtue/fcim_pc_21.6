@@ -1,3 +1,14 @@
+.vscode/*
+*.code-workspace
+
+# Local History for Visual Studio Code
+.history/
+
+# project-specific
+te1_*.c
+te2_*.c
+*test*.c
+
 # Prerequisites
 *.d
 
