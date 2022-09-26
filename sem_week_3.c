@@ -22,24 +22,33 @@ int fib(int n)
 
 void draw_triangle(int count)
 {
-    for (size_t i = 0; i < count; i++)
+    for (size_t i = 1; i <= count; i++)
     {
         // если треугольник должен прилегать к правому краю, нужны дополнительные пробелы
-        for (size_t j = i; j < count - 1; j++)
+        for (size_t j = i; j < count; j++)
         {
             printf(" ");
         }
         // сам треугольник рисуется согласно алгоритму: количество символов в строке равно номеру строки
         // на первой - 1, на второй - 2, на n-ой - n символов
-        for (size_t j = 0; j < i; j++)
+        for (size_t j = 1; j <= i; j = j + 1)
         {
-            if (j % 2) printf("*"); // если символы необходимо чередовать
-            else printf("+");
+            printf("*");
         }
         printf("\n");
     }
 
     return; // в функциях, которые возвращают void, писать return в конце не обязательно 
+}
+
+void digits(int x) 
+{
+    while(x)
+    {
+        printf("%d ", x % 10);
+        x = x / 10;
+    }
+    // return не нужен, т.к. функция типа void
 }
 
 int main(int argc, char const *argv[])
@@ -52,4 +61,8 @@ int main(int argc, char const *argv[])
     {
         printf("%d ", fib(i));
     }
+    printf("\n");
+
+    // вывести в терминал цифры числа в обратном порядке
+    digits(45013);
 }
