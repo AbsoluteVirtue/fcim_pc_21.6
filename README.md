@@ -11,7 +11,9 @@
    https://www.youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH
 2. Т. Хирьянов, **Подготовка к курсу информатики МФТИ (язык С)**,
    https://www.youtube.com/playlist?list=PLRDzFCPr95fLjzcv6nNdjMu_9RcZgIM9U
-3. Т. Хирьянов, **Основы программирования и анализа данных на Python**,
+3. К. Владимиров, **Практика языка С (МФТИ)**,
+   https://www.youtube.com/playlist?list=PL3BR09unfgchRxdDws74aY4mlSk9eYGEs
+4. Т. Хирьянов, **Основы программирования и анализа данных на Python**,
    https://teach-in.ru/course/python-programming-and-data-analysis-basics
-4. E. Demaine, J. Ku, J. Solomon, **Introduction to Algorithms**,
+5. E. Demaine, J. Ku, J. Solomon, **Introduction to Algorithms**,
    https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/
