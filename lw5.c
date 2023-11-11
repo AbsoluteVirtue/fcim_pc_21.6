@@ -22,11 +22,10 @@
 
 typedef enum { false, true } bool;
 
-
 int main(void)
 {
     int counter = 0;
-    char str[10] = {0};
+    char str[15] = {0};
 
     scanf("%i%s", &counter, str);
 
