@@ -1,6 +1,8 @@
 #include <stddef.h>
 #include <stdio.h>
 
+// https://www.youtube.com/watch?v=kPRA0W1kECg
+
 int main() {
 
     #define count 5
