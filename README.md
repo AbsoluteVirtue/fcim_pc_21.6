@@ -24,4 +24,5 @@
    https://teach-in.ru/course/python-programming-and-data-analysis-basics
 4. B. Eater , **Build a 65c02-based computer from scratch**,
    https://www.youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH
-5. C. Muratori, **Performance-aware programming** (платный курс), https://www.computerenhance.com/p/welcome-to-the-performance-aware
+5. C. Muratori, **Performance-aware programming** (платный курс),
+   https://www.computerenhance.com/p/welcome-to-the-performance-aware
