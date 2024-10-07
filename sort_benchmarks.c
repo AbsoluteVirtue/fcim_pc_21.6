@@ -22,7 +22,7 @@ int partition(int arr[], int low, int high) {
 
 void quicksort(int arr[], int low, int high) {
     if (low < high) {
-        int pi = patition(arr, low, high);
+        int pi = partition(arr, low, high);
         // arr[pi] is set after this point
         quicksort(arr, low, pi - 1);
         quicksort(arr, pi + 1, high);
