@@ -2,13 +2,13 @@
 #include <stddef.h>
 
 // статические переменные хранятся вне стэка
-static int *x;
+static char *x;
 static int y;
 
 // функция - инструмент обобщения вычислительных процессов
 void   // тип возвращаемого значения нужно указывать даже если функции нечего возвращать
 print( // имя функции - абстракция вычислительного процесса
-char *x, size_t y) // параметры функции - связанные переменные
+      char *x, size_t y) // параметры функции - связанные переменные
 { // тело функции определяет локальный блок для всех имен, включая параметры
     size_t i = 0; // свободная переменная
     for (; i < y; i++)
@@ -40,7 +40,7 @@ int main(void) {
 
     print(array, count); // вызов функции - аппликация имени функции к списку аргументов
 
-    printf("%d ", factorial(d));
+    printf("%d ", factorial(a));
 
     printf("%zu ", fibonacci(d));
 }
@@ -80,6 +80,22 @@ size_t fibonacci(size_t n) {
 
 size_t fib_helper(size_t a, size_t b, size_t n) {
     if (n == 0) return b;
-    return fib_helper(a + b, a, count - 1);
+    return fib_helper(a + b, a, n - 1);
 }
+#endif
+
+#ifdef lambda
+// Пример реализации лямбда-выражения на базе макро, слабонервным не смотреть:
+#define lambda(lambda$_ret, lambda$_args, lambda$_body) \
+    (                                                   \
+        {                                               \
+            lambda$_ret lambda$__anon$ lambda$_args     \
+                lambda$_body                            \
+                    &amp;                               \
+            lambda$__anon$;                             \
+        })
+// пример использования для прототипа:
+float average(float (*fn)(float inp));
+
+average(lambda(float, (float x), { return 2 * x; }));
 #endif
