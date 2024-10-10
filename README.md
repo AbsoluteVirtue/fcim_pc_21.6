@@ -10,10 +10,9 @@
 
 ## Список рекоммендуемой литературы
 1. B. Kernighan, D. Ritchie, **The C Programming Language** (Б. Керниган, Д. Ритчи, "Язык программирования Си", рус.)
-2. D. Ritchie, **The Development of the C Language**, https://www.bell-labs.com/usr/dmr/www/chist.html
-3. H. Abelson, G. Sussman, **Structure and interpretation of computer programs** (Х. Абельсон, Дж. Сассман, "Структура и интерпретация компьютерных программ", рус.)
-4. N. Wirth, **Algorithms + Data Structures = Programming** (Н. Вирт, "Алгоритмы и структуры данных", рус.)
-5. A. Stepanov, P. McJones, **Elements of Programming** (А. Степанов, "Элементы программирования", рус.)
+2. H. Abelson, G. Sussman, **Structure and interpretation of computer programs**, https://sourceacademy.org/sicpjs/1 (Х. Абельсон, Дж. Сассман, "Структура и интерпретация компьютерных программ", рус.)
+3. N. Wirth, **Algorithms + Data Structures = Programming** (Н. Вирт, "Алгоритмы и структуры данных", рус.)
+4. A. Stepanov, P. McJones, **Elements of Programming** (А. Степанов, "Элементы программирования", рус.)
 
 ## Онлайн-курсы
 1. Т. Хирьянов, **Подготовка к курсу информатики МФТИ (язык С)**,
@@ -26,3 +25,4 @@
    https://www.youtube.com/playlist?list=PLowKtXNTBypFbtuVMUVXNR0z1mu7dp7eH
 5. C. Muratori, **Performance-aware programming** (платный курс),
    https://www.computerenhance.com/p/welcome-to-the-performance-aware
+6. D. Ritchie, **The Development of the C Language**, https://www.bell-labs.com/usr/dmr/www/chist.html
