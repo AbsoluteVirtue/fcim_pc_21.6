@@ -1,25 +1,5 @@
 #include <stdio.h>
 
-/*
-    дерево рекурсивных вызовов функции вычисления числа Фибоначчи:
-                              fib(5)   
-                    /                       \
-                fib(4)                    fib(3)   
-                /        \              /       \ 
-            fib(3)       fib(2)        fib(2)   fib(1)
-            /    \       /    \        /      \
-        fib(2) fib(1)  fib(1) fib(0) fib(1) fib(0)
-       /     \
-    fib(1)  fib(0)
-*/
-int fib(int n)
-{
-    // если аргумент стал равен 1 или 0, прервать рекурсивную цепочку вызовов:
-    if (n <= 1) return n;
-    // иначе рекурсивно просуммировать все варианты начиная с n:
-    return fib(n - 1) + fib(n - 2); 
-}
-
 void draw_triangle(int count)
 {
     for (size_t i = 1; i <= count; i++)
