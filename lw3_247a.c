@@ -15,10 +15,10 @@
 
 int main( void )
 {
-    size_t n = 0;
-    scanf("%zu", &n);
+    size_t k = 0;
+    scanf("%zu", &k);
 
-    const size_t N = n;
+    const size_t N = k;
     int matrix[N][N];
 
     for (size_t i = 0; i < N; i++)
