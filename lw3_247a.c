@@ -4,16 +4,20 @@
 
 Вывести на экран элементы между главной и побочной диагоналями от 2 до 5 часов по часовой стрелке.
 
+Например, для ввода: 3 1 2 3 4 5 6 7 8 9 1 1 40
+вывод: 3 5 6 9
+
 */
 
 #include <stdio.h>
+#include <stddef.h>
 
-int main()
+int main( void )
 {
-    int rows = 0, sum = 0;
-    scanf("%d%d", &rows, &sum);
+    size_t n = 0;
+    scanf("%zu", &n);
 
-    const int N = rows;
+    const size_t N = n;
     int matrix[N][N];
 
     for (size_t i = 0; i < N; i++)
@@ -24,6 +28,12 @@ int main()
         }
     }
     
+    size_t m = 0, n = 0;
+    int sum = 0, result = 0;
+    scanf("%zu%zu%d", &m, &n, &sum);
+
     // алгоритм и вывод результата здесь
 
+    // проверка суммы
+    assert(sum == result);
 }
