@@ -13,6 +13,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void cons /* определение функции создания матрицы здесь */
+
 int main( void )
 {
     size_t brow, bcol;
