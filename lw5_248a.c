@@ -17,7 +17,7 @@
 char *capitalize(char*);
 char *to_upper(char*);
 char *to_lower(char*);
-int lexicographical_compare(const char*, const char*);
+int   lexicographical_compare(const char*, const char*);
 
 int main()
 {
@@ -25,9 +25,9 @@ int main()
 
     scanf("%s", str1);
 
-    printf(capitalize(str1));
-    printf(to_upper(str1));
-    printf(to_lower(str1));
+    printf("%s ", capitalize(str1));
+    printf("%s ", to_upper(str1));
+    printf("%s ", to_lower(str1));
 
     char str2[20] = {0};
 
