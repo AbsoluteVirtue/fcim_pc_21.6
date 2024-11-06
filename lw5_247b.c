@@ -17,7 +17,7 @@
 char *capitalize(char*);
 char *to_upper(char*);
 char *to_lower(char*);
-char *swap_strings(const char*, const char*);
+char *swap_strings(char*, char*);
 
 int main()
 {
