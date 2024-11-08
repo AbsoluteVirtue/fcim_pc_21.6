@@ -6,8 +6,9 @@
   3. Изменяет строку таким образом, чтобы все буквы в ней были прописными, т.е. для ввода "KOLBASA" результат: "kolbasa". Результат вывести на экран.
   4. Определяет частоту повторения каждой буквы в строке.
   
-  Пример ввода: HeLLo
+  Пример ввода:  HeLLo
   Пример вывода: Hello HELLO hello
+                 e 1 h 1 l 2 o 1
 
   Пользоваться стандартными функциями для манипуляции буферов и строк (из файла string.h и т.п.) не разрешается.
 */
@@ -17,6 +18,7 @@
 char *capitalize(char*);
 char *to_upper(char*);
 char *to_lower(char*);
+void frequency(char*);
 
 int main()
 {
@@ -28,4 +30,5 @@ int main()
     printf("%s ", to_upper(str1));
     printf("%s ", to_lower(str1));
 
+    frequency(str1);
 }
