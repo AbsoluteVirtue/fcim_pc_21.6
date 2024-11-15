@@ -11,14 +11,14 @@ struct B
 {
     int x;
     char *y;
-    float z;
+    double z;
 };
 
 union C
 {
     int x;
     char *y;
-    float z;
+    double z;
 };
 
 int main()
@@ -39,11 +39,25 @@ int main()
     // в С для этого есть встроенный механизм - структуры {struct или union}
 
     struct B b = {.z = 9.5, .y = "hello", .x = 10};
-    // { int | char | float }
+/*
+    { int | char | double }
+
+    struct B
+        size=24 align=8
+        base size=24 base align=8
+    B (0x0x7e7592f9f420) 0
+*/
     b.x = 20;
 
     union C c = {.x = 15};
-    // { int или char или float }
+/*
+    { int или char или double }
+
+    union C
+        size=8 align=8
+        base size=8 base align=8
+    C (0x0x7e7592f9f480) 0
+*/
     c.y = "goodbye";
     // c.x теперь не доступен, как и c.z
 
@@ -68,7 +82,7 @@ int main()
 
     // массивы структур удобно использовать для создания таблиц
     struct B t[3];
-    // [ { int | char | float } | { int | char | float } | { int | char | float } ]
+    // [ { int | char | double } | { int | char | double } | { int | char | double } ]
     for (size_t i = 0; i < 3; i++)
     {
         t[i].x = i;
