@@ -85,8 +85,8 @@ int main()
     // [ { int | char | double } | { int | char | double } | { int | char | double } ]
     for (size_t i = 0; i < 3; i++)
     {
-        t[i].x = i;
-        t[i].y = "hi";
+        (*(t+i)).x = i;
+        (t + i)->y = "hi";
         t[i].z = i;
     }
     
