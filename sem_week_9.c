@@ -29,7 +29,7 @@ int main()
 
     // если необходимо хранить разные типы данных, приходится идти на разные хитрости, например:
     void *d[3];
-    // [ pointer | pointer | pointer ] -> [  *int  |  *char  |  *float  ]
+    // [ pointer | pointer | pointer ] -> [  *int  |  *char  |  *double  ]
     for (size_t i = 0; i < 3; i++)
     {
         d[i] = &a[i];
