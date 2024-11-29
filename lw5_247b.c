@@ -28,10 +28,10 @@ int main()
     printf("%s ", capitalize(str1));
     printf("%s ", to_upper(str1));
     printf("%s ", to_lower(str1));
-
-    char str2[20] = {0};
-    char str3[20] = {0};
-
+/*
+    str2 - строка с выделенной любфым способом памятью
+    str3 - строка с выделенной любфым способом памятью
+*/
     scanf("%s%s", str2, str3);
     #include <string.h>
     assert(!strcmp(str3, swap_strings(str1, str2)));
