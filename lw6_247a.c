@@ -45,8 +45,8 @@ int main(void)
 
     // заполнение таблицы
 
-    char needle = 0;
-    scanf("%c", &needle);
+    size_t length = 0;
+    scanf("%zu", &length);
 
     //  фильрование таблицы и создание новой таблицы
 }
