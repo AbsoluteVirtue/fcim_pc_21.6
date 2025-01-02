@@ -67,22 +67,37 @@ Therefore,
 #include <stdlib.h>
 #include <stdio.h>
 
-struct node {
+typedef struct {
+    int x;
+    void *next; // тип поля структуры должен быть известен заранее, иначе невозможно определить размер структуры
+                // т.о. если структура должна ссылаться на объект своего же типа, это необходимо делать через явный указатель
+} node_a;
 
+typedef struct node {
     int x;
     struct node* left;
-    struct node* right;
-
-};
+    struct node* right; // здесь ситуация аналогична предыдущему примеру, но тип указателя приводится автоматически
+                        // это позволяет видеть поля объекта, на который ссылается указатель, без необходимости приводить тип
+} node_b;
 
 int main()
 {
+    node_a b1 = {1, NULL};
+    node_a a1 = {0, &b1};
+
+    node_a *t1 = &a1;
+    while(t1 != NULL) {
+        printf("%d ", t1->x); // неявное приведение типа из void* к node_a*
+        t1 = t1->next;
+    }
+
+    for(node_a *t1 = &a1; t1 != NULL; t1 = t1->next) {
+        printf("%d ", *((int*)t1)); // тип указателя можно сразу привести к int*, так как первое поле структуры имеет тип int
+    }
     
-    struct node c = {2, NULL, NULL};
-    struct node b = {0, NULL, NULL};
-    struct node a = {1, &b, &c};
+    struct node c2 = {2, NULL, NULL};
+    struct node b2 = {0, NULL, NULL};
+    node_b a2 = {1, &b2, &c2};
 
-    printf("%d %d %d", a.x, *((int*)a.left), *((int*)a.right));
-    printf("%d %d %d", a.x, a.left->x, a.right->x);
-
+    printf("%d %d %d", a2.x, a2.left->x, a2.right->x); // тип полей left и right явно приведен к нужному типу заранее
 }
